@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "YouFI",
+    "slug": "youfi-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.youfi.app",
+      "infoPlist": {
+        "NSRemindersUsageDescription": "Allow YouFI to access your reminders",
+        "NSCalendarsUsageDescription": "Allow YouFI to add upcoming payments to your calendar",
+        "NSCameraUsageDescription": "Allow YouFI to use your camera for scanning receipts."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.youfi.app",
+      "permissions": [
+        "READ_CALENDAR",
+        "WRITE_CALENDAR",
+        "CAMERA"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-camera",
+      "expo-calendar",
+      [
+        "react-native-purchases",
+        {
+          "publicApiKey": ""
+        }
+      ],
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511"
+        }
+      ]
+    ]
+  }
+}
